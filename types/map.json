@@ -1,0 +1,19 @@
+{
+  "name": "Map",
+  "erdAbbreviation": "<map>",
+  "dtdAbbreviation": "{...}",
+  "parentType": "document",
+  "useSample": true,
+  "hiddenOnEntity": "view",
+  "defaultValues": {
+    "subtype": "",
+    "keyType": "char",
+    "keySubtype": "text",
+    "dependencies": [],
+    "primaryKey": false,
+    "properties": [],
+    "minProperties": "",
+    "maxProperties": "",
+    "additionalProperties": false
+  }
+}

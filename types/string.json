@@ -1,0 +1,36 @@
+{
+  "name": "string",
+  "erdAbbreviation": "<str>",
+  "dtdAbbreviation": "{ABC}",
+  "parentType": "string",
+  "useSample": true,
+  "hiddenOnEntity": "view",
+  "jsonType": {
+    "order": 1,
+    "name": "text",
+    "jsonRoot": true,
+    "source": {
+      "key": "mode",
+      "value": "text"
+    }
+  },
+  "default": true,
+  "defaultValues": {
+    "primaryKey": false,
+    "relationshipType": "",
+    "parentRelationship": "",
+    "childRelationships": [],
+    "foreignCollection": "",
+    "foreignField": [],
+    "default": "",
+    "minLength": "",
+    "maxLength": "",
+    "pattern": "",
+    "enum": [],
+    "sample": "",
+    "comments": "",
+    "mode": "text",
+    "subtype": "string"
+  },
+  "subtypes": ["String", "FixedString"]
+}

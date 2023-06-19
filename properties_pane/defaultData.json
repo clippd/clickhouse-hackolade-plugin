@@ -1,0 +1,51 @@
+{
+  "model": {
+    "modelName": "New model",
+    "dbVersion": "3.x",
+    "dbVendor": "Clickhouse Altinity"
+  },
+  "container": {
+    "name": "New Database",
+    "indexes": []
+  },
+  "collection": {
+    "collectionName": "New table",
+    "engineName": "MergeTree",
+    "granuleSize": 8192
+  },
+  "field": {
+    "name": "New column",
+    "subtype": {
+      "valueDependencies": [
+        {
+          "value": "object",
+          "dependency": {
+            "key": "type",
+            "value": "jsonObject"
+          }
+        },
+        {
+          "value": "array",
+          "dependency": {
+            "key": "type",
+            "value": "jsonArray"
+          }
+        }
+      ]
+    }
+  },
+  "patternField": {
+    "name": "^[a-zA-Z0-9_.-]+$"
+  },
+  "multipleField": {
+    "primaryKey": false
+  },
+  "subschema": {},
+  "arrayItem": {},
+  "choice": {},
+  "relationship": {},
+  "user": {},
+  "view": {
+    "viewOn": ""
+  }
+}

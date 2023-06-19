@@ -1,0 +1,37 @@
+{
+  "name": "Clickhouse",
+  "version": "1.0.0",
+  "description": "",
+  "author": "A Kalyan Kumar",
+  "dependencies": {
+    "@clickhouse/client": "^0.0.16",
+    "antlr4": "^4.8.0",
+    "async": "^3.2.4",
+    "cassandra-driver": "^4.3.1",
+    "fast-xml-parser": "^3.19.0",
+    "jks-js": "^1.0.0",
+    "tunnel-ssh": "github:hackolade/tunnel-ssh"
+  },
+  "systemKeyspaces": [
+    "cfs",
+    "cfs_archive",
+    "dse_leases",
+    "dse_perf",
+    "dse_security",
+    "dse_system",
+    "dsefs",
+    "HiveMetaStore",
+    "OpsCenter",
+    "solr_admin",
+    "spark_system",
+    "system",
+    "system_auth",
+    "system_distributed",
+    "system_schema",
+    "system_traces",
+    "system_views",
+    "system_virtual_schema"
+  ],
+  "type": "multi",
+  "installed": true
+}

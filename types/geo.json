@@ -1,0 +1,28 @@
+{
+  "name": "geo",
+  "erdAbbreviation": "<geo>",
+  "dtdAbbreviation": "{geo}",
+  "parentType": "array",
+  "useSample": false,
+  "hiddenOnEntity": "view",
+  "defaultValues": {
+    "required": false,
+    "primaryKey": false,
+    "comments": "",
+    "properties": [],
+    "relationshipType": "",
+    "parentRelationship": "",
+    "childRelationships": [],
+    "foreignCollection": "",
+    "foreignField": [],
+    "minProperties": "",
+    "maxProperties": "",
+    "additionalProperties": false,
+    "subTypes": [
+      { "name": "Point", "snippet": "geo-point" },
+      { "name": "Ring", "snippet": "geo-ring" },
+      { "name": "Polygon", "snippet": "geo-polygon" },
+      { "name": "MultiPolygon", "snippet": "geo-multi-polygon" }
+    ]
+  }
+}

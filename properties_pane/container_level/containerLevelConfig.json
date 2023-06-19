@@ -1,0 +1,54 @@
+[
+  {
+    "lowerTab": "Details",
+    "structure": [
+      {
+        "propertyName": "Technical name",
+        "propertyKeyword": "code",
+        "shouldValidate": true,
+        "propertyType": "text",
+        "regex": "^[a-z_0-9]{0,48}$"
+      },
+      {
+        "propertyName": "Description",
+        "propertyKeyword": "description",
+        "shouldValidate": false,
+        "propertyTooltip": "description",
+        "propertyType": "details",
+        "template": "textarea"
+      },
+      {
+        "propertyName": "If not exists",
+        "propertyKeyword": "keyspaceIfNotExist",
+        "propertyTooltip": "If specified, creates the keyspace only when it does not exist. The creation of view succeeds (no error is thrown) if the specified view already exists in the system. This parameter is mutually exclusive to OR REPLACE and cannot be specified together.",
+        "defaultValue": false,
+        "propertyType": "checkbox"
+      },
+      {
+        "propertyName": "Number of Shards",
+        "propertyKeyword": "numShards",
+        "shouldValidate": false,
+        "propertyType": "numeric",
+        "valueType": "number",
+        "allowNegative": false
+      },
+      {
+        "propertyName": "Number of Replicas",
+        "propertyKeyword": "numReplicas",
+        "shouldValidate": false,
+        "propertyType": "numeric",
+        "valueType": "number",
+        "allowNegative": false
+      },
+      {
+        "propertyName": "Comments",
+        "propertyKeyword": "comments",
+        "shouldValidate": false,
+        "propertyTooltip": "comments",
+        "propertyType": "details",
+        "template": "textarea"
+      }
+    ],
+    "containerLevelKeys": []
+  }
+]

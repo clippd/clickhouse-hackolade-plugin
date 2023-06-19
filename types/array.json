@@ -1,0 +1,46 @@
+{
+  "name": "Array",
+  "erdAbbreviation": "<arr>",
+  "dtdAbbreviation": "[...]",
+  "parentType": "array",
+  "useSample": true,
+  "hiddenOnEntity": "view",
+  "defaultValues": {
+    "subtype": "Array<String>",
+    "properties": [],
+    "primaryKey": false,
+    "additionalItems": true,
+    "minItems": "",
+    "maxItems": "",
+    "uniqueItems": false
+  },
+  "subtypes": {
+    "Array<String>": {
+      "childValueType": "String"
+    },
+    "Array<numeric>": {
+      "childValueType": "numeric"
+    },
+    "Array<Bool>": {
+      "childValueType": "Bool"
+    },
+    "Array<Map>": {
+      "childValueType": "Map"
+    },
+    "Array<geo>": {
+      "childValueType": "geo"
+    },
+    "Array<date>": {
+      "childValueType": "date"
+    },
+    "Array<Array>": {
+      "childValueType": "Array"
+    },
+    "Array<Tuple>": {
+      "childValueType": "Tuple"
+    },
+    "Array<UUID>": {
+      "childValueType": "UUID"
+    }
+  }
+}

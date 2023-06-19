@@ -1,0 +1,68 @@
+[
+  {
+    "lowerTab": "Details",
+    "structure": [
+      {
+        "propertyName": "Technical name",
+        "propertyKeyword": "code",
+        "propertyType": "text",
+        "regex": "^[a-z_0-9]{0,48}$"
+      },
+      {
+        "propertyName": "Primary key",
+        "propertyKeyword": "compositePrimaryKey",
+        "propertyType": "primaryKeySetter",
+        "abbr": "pk,PK"
+      },
+      {
+        "propertyName": "Partition key",
+        "propertyKeyword": "partitionKey",
+        "propertyType": "primaryKeySetter"
+      },
+      {
+        "propertyName": "Sort Key",
+        "propertyKeyword": "compositeSortKey",
+        "propertyType": "primaryKeySetter"
+      },
+      {
+        "propertyName": "If not exists",
+        "propertyKeyword": "tableIfNotExist",
+        "propertyTooltip": "If specified, creates the table only when it does not exist. The creation of view succeeds (no error is thrown) if the specified view already exists in the system. This parameter is mutually exclusive to OR REPLACE and cannot be specified together.",
+        "defaultValue": false,
+        "propertyType": "checkbox"
+      },
+      {
+        "propertyName": "Engine",
+        "propertyKeyword": "engineName",
+        "propertyTooltip": "Select from list of options",
+        "propertyType": "select",
+        "options": [
+          "MergeTree",
+          "ReplacingMergeTree",
+          "SummingMergeTree",
+          "AggregatingMergeTree",
+          "CollapsingMergeTree",
+          "VersionedCollapsingMergeTree",
+          "GraphiteMergeTree"
+        ]
+      },
+      {
+        "propertyName": "Index Granularity",
+        "propertyKeyword": "granuleSize",
+        "shouldValidate": false,
+        "propertyTooltip": "",
+        "propertyType": "numeric",
+        "valueType": "number"
+      },
+      {
+        "propertyName": "Comments",
+        "propertyKeyword": "comments",
+        "propertyTooltip": "comments",
+        "propertyType": "details",
+        "template": "textarea",
+        "valueType": "string"
+      }
+    ],
+    "columnsRatio": [3.7, 5]
+  }
+]

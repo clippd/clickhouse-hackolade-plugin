@@ -1,0 +1,36 @@
+{
+	"extension": "cql",
+	"filterName": "Cassandra Query Language",
+	"namePrefix": "Cassandra",
+	"hasUpdateScript": false,
+	"level": {
+		"entity": true,
+		"container": true,
+		"view": true
+	},
+	"applyScriptToInstance": true,
+	"compMode": {
+		"entity": true,
+		"container": true
+	},
+	"additionalOptions": [
+		{
+			"id": "applyDropStatements",
+			"value": false,
+			"forUpdate": true,
+			"name": "Apply Drop Statements",
+			"isDropInStatements": true
+		},
+		{
+			"name": "Exclude Keyspace ALTER statements",
+			"id": "excludeContainerAlterStatements",
+			"value": false,
+			"forUpdate": true,
+			"compModeDependency": {
+				"containers": {
+					"modified": true
+				}
+			}
+		}
+	]
+}

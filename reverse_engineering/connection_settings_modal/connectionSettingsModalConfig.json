@@ -1,0 +1,86 @@
+[
+  {
+    "lowerTab": "Connection",
+    "helpUrl": [
+      {
+        "value": "https://hackolade.com/help/Astra.html",
+        "dependency": {
+          "key": "clusterType",
+          "value": "apolloCloud"
+        }
+      }
+    ],
+    "structure": [
+      {
+        "inputLabel": "Name",
+        "inputKeyword": "name",
+        "inputType": "text",
+        "inputPlaceholder": "Name"
+      },
+      {
+        "inputLabel": "Host",
+        "inputKeyword": "host",
+        "inputType": "text",
+        "inputPlaceholder": "Address",
+        "description": ""
+      },
+      {
+        "inputLabel": "Port",
+        "inputKeyword": "port",
+        "inputType": "text",
+        "inputPlaceholder": "Port",
+        "description": ""
+      },
+      {
+        "inputLabel": "Protocol",
+        "inputKeyword": "protocol",
+        "inputType": "text",
+        "inputPlaceholder": "Protocol",
+        "description": ""
+      },
+
+      {
+        "inputLabel": "Secure Connect Bundle",
+        "inputKeyword": "secureConnectBundle",
+        "inputType": "file",
+        "inputPlaceholder": "Secure Connect Bundle",
+        "extensions": ["zip"],
+        "dependency": {
+          "key": "clusterType",
+          "value": "apolloCloud"
+        }
+      }
+    ]
+  },
+  {
+    "lowerTab": "Authentication",
+    "helpUrl": "https://hackolade.com/help/Usernamepassword1.html",
+    "structure": [
+      {
+        "inputLabel": "Username",
+        "inputKeyword": "username",
+        "inputType": "text",
+        "inputPlaceholder": "Username"
+      },
+      {
+        "inputLabel": "Password",
+        "inputKeyword": "password",
+        "inputType": "password",
+        "inputPlaceholder": "pwd",
+        "isHiddenKey": true
+      }
+    ]
+  },
+  {
+    "lowerTab": "Advanced",
+    "structure": [
+      {
+        "inputLabel": "Request timeout (ms)",
+        "inputKeyword": "requestTimeout",
+        "inputType": "text",
+        "inputPlaceholder": "60000",
+        "description": "Default: 60 sec (60k ms)"
+      }
+    ]
+  }
+]
