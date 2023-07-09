@@ -311,11 +311,11 @@
         "typeable": true,
         "options": [
           "Array<String>",
-          "Array<numeric>",
+          "Array<Numeric>",
           "Array<Bool>",
           "Array<Map>",
-          "Array<geo>",
-          "Array<date>",
+          "Array<Geo>",
+          "Array<Date>",
           "Array<Array>",
           "Array<Tuple>",
           "Array<UUID>"

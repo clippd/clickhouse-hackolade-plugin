@@ -14,25 +14,25 @@ module.exports = {
   },
   getSchema: async function (client, databaseName, tableName) {
     const ddl = await getTableDdl(client, databaseName, tableName);
-    let arr = ddl.split("\\n");
-    arr = arr.slice(arr.indexOf("(") + 1, arr.indexOf(")"));
-    arr = arr.map((item) => {
+    let columns = ddl.split("\\n");
+    columns = columns.slice(columns.indexOf("(") + 1, columns.indexOf(")"));
+    columns = columns.map((item) => {
       const temp = item
         .replaceAll(/`/g, "")
         .replace("    ", "")
         .replace(",", "")
         .split(" ");
-      const attribute = { name: temp[0], subtype: temp[1] };
-      return attribute;
+      const column = { name: temp[0], subtype: temp[1] };
+      return column;
     });
 
     const schema = { properties: {} };
-    arr.forEach((attribute) => {
-      const { name, subtype } = attribute;
-      schema.properties[name] = {
-        type: getType(subtype),
-        mode: subtype,
-      };
+    columns.forEach((column) => {
+      const { name, subtype } = column;
+      schema.properties[name] = getType(subtype);
+      if (subtype.indexOf("Array") !== -1) {
+        schema.properties[name] = getTypeForArray(subtype);
+      }
     });
     return schema;
   },
@@ -42,7 +42,7 @@ const getType = (subtype) => {
   switch (subtype) {
     case "String":
     case "FixedString":
-      return "String";
+      return { type: "String", mode: subtype };
     case "UInt8":
     case "UInt16":
     case "UInt32":
@@ -57,13 +57,22 @@ const getType = (subtype) => {
     case "Int256":
     case "Float32":
     case "Float64":
-      return "Numeric";
+      return { type: "Numeric", mode: subtype };
     case "Bool":
-      return "Bool";
+      return { type: "Bool" };
     case "DateTime":
     case "DateTime64":
     case "Date":
     case "Date32":
-      return "Date";
+      return { type: "Date", mode: subtype };
+    default:
+      return { type: subtype };
   }
+  //TODO more types to be added
+};
+
+const getTypeForArray = (subtype) => {
+  const childSubType = subtype.match(/\((.*?)\)/)[1];
+  const childType = getType(childSubType).type;
+  return { type: "Array", subtype: `Array<${childType}>` };
 };
