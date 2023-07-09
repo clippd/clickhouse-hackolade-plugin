@@ -1,7 +1,7 @@
 {
   "lowerTab": "JsonDetails",
   "structure": {
-    "string": [
+    "String": [
       "name",
       "code",
       "schemaId",
@@ -76,7 +76,7 @@
       "sample",
       "comments"
     ],
-    "numeric": [
+    "Numeric": [
       "name",
       "code",
       "schemaId",
@@ -225,7 +225,7 @@
       "sample",
       "comments"
     ],
-    "date": [
+    "Date": [
       "name",
       "code",
       "sampleName",
@@ -485,7 +485,7 @@
       "additionalItems",
       "comments"
     ],
-    "geo": [
+    "Geo": [
       "name",
       "code",
       "schemaId",

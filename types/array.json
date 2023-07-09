@@ -18,8 +18,8 @@
     "Array<String>": {
       "childValueType": "String"
     },
-    "Array<numeric>": {
-      "childValueType": "numeric"
+    "Array<Numeric>": {
+      "childValueType": "Numeric"
     },
     "Array<Bool>": {
       "childValueType": "Bool"
@@ -27,11 +27,11 @@
     "Array<Map>": {
       "childValueType": "Map"
     },
-    "Array<geo>": {
-      "childValueType": "geo"
+    "Array<Geo>": {
+      "childValueType": "Geo"
     },
-    "Array<date>": {
-      "childValueType": "date"
+    "Array<Date>": {
+      "childValueType": "Date"
     },
     "Array<Array>": {
       "childValueType": "Array"

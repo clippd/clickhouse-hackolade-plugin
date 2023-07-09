@@ -1,5 +1,5 @@
 {
-  "name": "date",
+  "name": "Date",
   "erdAbbreviation": "<dt>",
   "dtdAbbreviation": "{dt}",
   "parentType": "string",

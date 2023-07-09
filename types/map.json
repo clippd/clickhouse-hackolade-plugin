@@ -1,6 +1,6 @@
 {
   "name": "Map",
-  "erdAbbreviation": "<map>",
+  "erdAbbreviation": "<Map>",
   "dtdAbbreviation": "{...}",
   "parentType": "document",
   "useSample": true,

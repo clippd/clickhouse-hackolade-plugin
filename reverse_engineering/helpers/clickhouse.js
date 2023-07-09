@@ -40,6 +40,14 @@ module.exports = {
     const dataset = await resultSet.json();
     return dataset;
   },
+
+  getTableDdl: async (client, databaseName, tableName) => {
+    const response = await client.exec({
+      query: `show create table ${databaseName}.${tableName}`,
+    });
+    const ddl = await streamToString(response.stream);
+    return ddl;
+  },
 };
 
 const streamToList = async (stream) => {
@@ -47,6 +55,16 @@ const streamToList = async (stream) => {
     stream.on("readable", function () {
       const buffer = stream.read();
       resolve(buffer ? buffer.toString("utf8").split("\n") : []);
+    });
+    stream.on("error", (err) => reject(err));
+  });
+};
+
+const streamToString = async (stream) => {
+  return await new Promise((resolve, reject) => {
+    stream.on("readable", function () {
+      const buffer = stream.read();
+      resolve(buffer ? buffer.toString("utf8") : "");
     });
     stream.on("error", (err) => reject(err));
   });

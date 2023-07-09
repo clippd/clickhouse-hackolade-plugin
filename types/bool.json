@@ -1,6 +1,6 @@
 {
   "name": "Bool",
-  "erdAbbreviation": "<bool>",
+  "erdAbbreviation": "<Bool>",
   "dtdAbbreviation": "{0/1}",
   "parentType": "boolean",
   "sample": true,

@@ -1,5 +1,5 @@
 {
-  "name": "string",
+  "name": "String",
   "erdAbbreviation": "<str>",
   "dtdAbbreviation": "{ABC}",
   "parentType": "string",
@@ -30,7 +30,7 @@
     "sample": "",
     "comments": "",
     "mode": "text",
-    "subtype": "string"
+    "subtype": "String"
   },
   "subtypes": ["String", "FixedString"]
 }

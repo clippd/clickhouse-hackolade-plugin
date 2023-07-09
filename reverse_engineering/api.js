@@ -9,6 +9,8 @@ const {
   getRecords,
 } = require("./helpers/clickhouse");
 
+const { getSchema } = require("./helpers");
+
 let _client = null;
 
 module.exports = {
@@ -116,6 +118,9 @@ module.exports = {
           logger.log("info", databaseName + "-" + tableName, "Getting records");
           const records = await getRecords(client, databaseName, tableName, 10);
           logger.log("info", records.length, "Size of the records received");
+
+          const schema = await getSchema(client, databaseName, tableName);
+
           return {
             dbName: databaseName,
             collectionName: tableName,
@@ -128,7 +133,9 @@ module.exports = {
             entityLevel: {
               constraint: [],
             },
-            validation: {},
+            validation: {
+              jsonSchema: schema,
+            },
             documentTemplate: records[0],
           };
         });
